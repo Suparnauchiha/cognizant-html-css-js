@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+
+:root{
+    --primary-color: #0c5c96; 
+    --secondary-color:#e24795;  
+     --bg-color: #f9fafb;
+    --text-color: #111827;
+    --muted-color: #6b7280;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*  font-family: "Pixelify Sans", sans-serif; */
+
+body{
+    background-color: var(--primary-color);
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 0;
+
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--secondary-color);
+}
+
+.search{
+    font-family: inherit;
+    padding: 1rem;
+    background-color:#0c5c96 ;
+    color:white;
+    border: 3px solid rgba(255, 255, 255);
+    border-radius: 20px;
+    font-size: 1.2rem;
+    box-shadow: 3px 4px 0.3px;
+}
+.search::placeholder{
+    color: #f9fafb;
+}
+.search:focus{
+    outline: none;
+    background-color:#05365a ;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie{
+    width: 300px;
+    margin: 1.5rem;
+    background-color: var(--secondary-color);
+    box-shadow: 5px 7px 0.9px rgb(0,0,0);
+    position: relative;
+    overflow: hidden;
+
+}
+.movie img{
+    width: 100%;
+}
+
+.movie-info{
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8px;
+    margin: 0.6rem;
+}
+
+.movie-info span.green {
+  color: rgb(144, 255, 144);
+  font-weight: bold;
+}
+
+.movie-info span.orange {
+  color: rgb(235, 185, 94);
+  font-weight: bold;
+}
+
+.movie-info span.red {
+  color: rgb(141, 8, 8);
+  font-weight: bold;
+ 
+}
+.overview {
+  background-color: #fff;
+  padding: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
